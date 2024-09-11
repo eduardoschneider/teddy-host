@@ -88,11 +88,11 @@ $ cd teddy-host
 $ npm install
 $ npm start
 
-$ cd empresas-micro
+$ cd teddy-empresas-micro
 $ npm install
 $ npm start
 
-$ cd parceiro-micro
+$ cd teddy-parceiro-micro
 $ npm install
 $ npm start
 
