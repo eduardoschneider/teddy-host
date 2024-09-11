@@ -80,8 +80,8 @@ docker pull eduschneiders/docker-microfrontend-parceiros:latest
 ```bash
 # Clone todos os repositórios necessários, com seus micro-frontends
 $ git clone https://github.com/eduardoschneider/teddy-host
-$ git clone https://github.com/eduardoschneider/empresas-micro
-$ git clone https://github.com/eduardoschneider/parceiro-micro
+$ git clone https://github.com/eduardoschneider/teddy-empresas-micro
+$ git clone https://github.com/eduardoschneider/teddy-parceiro-micro
 
 # Acesse seus repositórios, instale as dependencias e execute
 $ cd teddy-host
