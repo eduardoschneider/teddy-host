@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Nome do Projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um projeto que utiliza a arquitetura de micro front-ends com React e TypeScript, integrando vários micro front-ends em um único host.
 
-## Available Scripts
+## Visão Geral
 
-In the project directory, you can run:
+Este projeto utiliza a arquitetura de micro front-ends para modularização e escalabilidade. Inclui um **host** e múltiplos **micro front-ends** que interagem de forma independente, proporcionando uma experiência modular e escalável.
 
-### `npm start`
+### Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Micro Front-ends**: Separação do front-end em módulos independentes.
+- **Autenticação**: Protege rotas privadas e redireciona usuários não autenticados.
+- **Tabela Responsiva**: Exibição de dados com suporte a dispositivos móveis.
+- **Modal para Cadastro**: Interface para criação e edição de dados.
+- **Paginação**: Controle de navegação entre páginas de dados.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologias Utilizadas
 
-### `npm test`
+- **React 18**: Biblioteca para construção da interface do usuário.
+- **TypeScript**: Superset do JavaScript com tipagem estática.
+- **Axios**: Biblioteca para requisições HTTP.
+- **React Router**: Biblioteca para roteamento e navegação.
+- **SCSS**: Pré-processador CSS para estilização.
+- **Module Federation**: Para integração de micro front-ends.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Estrutura do Projeto
 
-### `npm run build`
+- **/src**: Código fonte do projeto.
+  - **/components**: Componentes reutilizáveis.
+  - **/pages**: Páginas e rotas do aplicativo.
+  - **/services**: Funções e serviços para comunicação com APIs.
+  - **/styles**: Arquivos SCSS para estilização.
+- **/public**: Arquivos estáticos e de configuração.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Configuração de Micro Front-ends
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Host**: O projeto principal que carrega os micro front-ends. Configurado para usar o Module Federation para integrar e carregar micro front-ends.
+- **Micro Front-ends**: Projetos independentes que são carregados pelo host usando Module Federation. Cada micro front-end pode ser executado e testado separadamente.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Configuração de Micro Front-ends
+- Qualquer um pode integrar nesse projeto, basta criar um novo projeto React e configurar o Module Federation, e após configurar todo webpack expondo seu novo projeto, adicionar no webpack desse projeto host para ele conseguir encontrá-lo.
 
-### `npm run eject`
+### Comunicação Entre Host e Micro Front-ends
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para passar dados e interagir entre o host e os micro front-ends:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Exportação e Importação de Funções**: Exporte funções ou componentes dos micro front-ends que precisam ser usados pelo host e vice-versa.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Requisitos que foram cumpridos
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Desenvolver em micro-front ends separadas por contextos;
+* Preparar um read.me com tudo necessário
+* Preparar imagem dos projetos para subir num cloud
+* Página de login que salva em cookies e local storage
+* Manter usuário logado via cookie e local storage
+* Página inicial com menu
+* CRUD completo de parceiros
+* CRUD completo de empresas externas
+* Sair para limpar os cookies e local storage
+* Paginação via URL para acesso direto da página, com redirect incluso.
+* CRUD persistido via API
+* Testes automatizados
+* Testes unitários
+* Vídeo explicativo sobre o projeto
 
-## Learn More
+## TODO List
+* Deploy no Vercel
+* Iniciar com Vite
+* Deploy no github pages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Como usar
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Para rodar esse projeto
+```bash
+# Clone todos os repositórios necessários, com seus micro-frontends
+$ git clone https://github.com/eduardoschneider/teddy-host
+$ git clone https://github.com/eduardoschneider/empresas-micro
+$ git clone https://github.com/eduardoschneider/parceiro-micro
 
-### Code Splitting
+# Acesse seus repositórios
+$ cd teddy-host
+$ cd empresas-micro
+$ cd parceiro-micro
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Instale as dependencias em todos
+$ npm install
 
-### Analyzing the Bundle Size
+# Rode os três
+$ npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
