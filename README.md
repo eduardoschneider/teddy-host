@@ -83,16 +83,21 @@ $ git clone https://github.com/eduardoschneider/teddy-host
 $ git clone https://github.com/eduardoschneider/empresas-micro
 $ git clone https://github.com/eduardoschneider/parceiro-micro
 
-# Acesse seus repositórios
+# Acesse seus repositórios, instale as dependencias e execute
 $ cd teddy-host
-$ cd empresas-micro
-$ cd parceiro-micro
-
-# Instale as dependencias em todos
 $ npm install
-
-# Rode os três
 $ npm start
+
+$ cd empresas-micro
+$ npm install
+$ npm start
+
+$ cd parceiro-micro
+$ npm install
+$ npm start
+
+Rodando no localhost:3000
+
 ```
 ## Utilizando
 - Agora você acessa http://localhost:3000 e o projeto deve estar funcionando normalmente.
