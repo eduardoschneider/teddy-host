@@ -58,14 +58,11 @@ Para passar dados e interagir entre o host e os micro front-ends:
 * Sair para limpar os cookies e local storage
 * Paginação via URL para acesso direto da página, com redirect incluso.
 * CRUD persistido via API
-* Testes automatizados
-* Testes unitários
 * Vídeo explicativo sobre o projeto
 
 ## TODO List
-* Deploy no Vercel
-* Iniciar com Vite
-* Deploy no github pages
+* Deploy no Vercel - Previsão: 2~3 horas
+* Testes automatizados & unitários - Previsão: 1~2 horas
 
 ## Como usar
 
