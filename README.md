@@ -1,10 +1,14 @@
 # Teddy Test - Host Application
 
 Um projeto que utiliza a arquitetura de micro front-ends com React e TypeScript, integrando vários micro front-ends em um único host.
+Vídeo demonstrativo: https://youtu.be/GFOf2UqE6xI
 
 ## Visão Geral
 
 Este projeto utiliza a arquitetura de micro front-ends para modularização e escalabilidade. Inclui um **host** e múltiplos **micro front-ends** que interagem de forma independente, proporcionando uma experiência modular e escalável.
+Link dos repositórios micro-front ends atuais:
+Porta 3001: https://github.com/eduardoschneider/teddy-empresas-micro
+Porta 3002: https://github.com/eduardoschneider/teddy-parceiro-micro
 
 ### Funcionalidades
 
@@ -58,14 +62,11 @@ Para passar dados e interagir entre o host e os micro front-ends:
 * Sair para limpar os cookies e local storage
 * Paginação via URL para acesso direto da página, com redirect incluso.
 * CRUD persistido via API
-* Testes automatizados
-* Testes unitários
 * Vídeo explicativo sobre o projeto
 
 ## TODO List
-* Deploy no Vercel
-* Iniciar com Vite
-* Deploy no github pages
+* Deploy no Vercel - Previsão: 2~3 horas
+* Testes automatizados & unitários - Previsão: 1~2 horas
 
 ## Como usar
 
@@ -88,11 +89,11 @@ $ cd teddy-host
 $ npm install
 $ npm start
 
-$ cd empresas-micro
+$ cd teddy-empresas-micro
 $ npm install
 $ npm start
 
-$ cd parceiro-micro
+$ cd teddy-parceiro-micro
 $ npm install
 $ npm start
 
