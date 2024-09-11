@@ -1,4 +1,4 @@
-# Nome do Projeto
+# Teddy Test - Host Application
 
 Um projeto que utiliza a arquitetura de micro front-ends com React e TypeScript, integrando vários micro front-ends em um único host.
 
