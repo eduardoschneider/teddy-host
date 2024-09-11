@@ -88,4 +88,6 @@ $ npm install
 # Rode os três
 $ npm start
 ```
-
+## Utilizando
+- Agora você acessa http://localhost:3000 e o projeto deve estar funcionando normalmente.
+- Os dois micro front-ends base estão na porta 3001 e 3002, respectivamente.
