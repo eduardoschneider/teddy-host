@@ -28,8 +28,7 @@ Este projeto utiliza a arquitetura de micro front-ends para modularização e es
 - **/src**: Código fonte do projeto.
   - **/components**: Componentes reutilizáveis.
   - **/pages**: Páginas e rotas do aplicativo.
-  - **/services**: Funções e serviços para comunicação com APIs.
-  - **/styles**: Arquivos SCSS para estilização.
+  - **/utils**: Funções e serviços para comunicação com APIs.
 - **/public**: Arquivos estáticos e de configuração.
 
 ## Configuração de Micro Front-ends
