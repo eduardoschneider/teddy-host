@@ -69,6 +69,13 @@ Para passar dados e interagir entre o host e os micro front-ends:
 
 ## Como usar
 
+### Imagens prontas no DockerHub
+```bash
+docker pull eduschneiders/docker-host:latest
+docker pull eduschneiders/docker-microfrontend-empresas:latest
+docker pull eduschneiders/docker-microfrontend-parceiros:latest
+```
+
 ### Para rodar esse projeto
 ```bash
 # Clone todos os repositórios necessários, com seus micro-frontends
