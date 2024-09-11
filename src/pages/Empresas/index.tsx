@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import BasePage from 'components/BasePage';
-import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 import './styles.scss';
 

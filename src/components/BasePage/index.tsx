@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import Menu from 'components/Menu';
 import UserStatus from 'components/UserStatus';
 import './styles.scss';

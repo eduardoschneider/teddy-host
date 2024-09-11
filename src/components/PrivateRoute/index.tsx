@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Navigate, useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 
 interface PrivateRouteProps {
   element: React.ReactElement;
