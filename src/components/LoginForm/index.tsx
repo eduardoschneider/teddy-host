@@ -19,7 +19,9 @@ const LoginForm: React.FC = () => {
             localStorage.setItem('username', usuario);
         }
 
-        navigate('/dashboard');
+        navigate(localStorage.getItem('redirectUrl') || '/');
+        localStorage.removeItem('redirectUrl');
+        
     };
 
     return (

@@ -9,11 +9,12 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({ element }) => {
   const location = useLocation();
   const isAuthenticated = !!localStorage.getItem('username') || !!document.cookie.split('; ').find(row => row.startsWith('username='));
 
-  return isAuthenticated ? (
-    element
-  ) : (
-    <Navigate to="/" state={{ from: location }} />
-  );
+  if (!isAuthenticated) {
+    localStorage.setItem('redirectUrl', location.pathname + location.search);
+    return <Navigate to="/" state={{ from: location }} />;
+  }
+
+  return element;
 };
 
 export default PrivateRoute;
